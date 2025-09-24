@@ -22,7 +22,7 @@ public class SpellCheck {
                 misspelled.add(word);
             }
         }
-        // Convert the arraylist into an array, and return it.
+        // Convert the arraylist into an array, and then return it.
         String[] answer = new String[misspelled.size()];
         for (int i = 0; i < misspelled.size(); i++) {
             answer[i] = misspelled.get(i);
