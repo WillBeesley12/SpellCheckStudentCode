@@ -16,8 +16,9 @@ class Node {
     public Node() {
         // For just inserting a node that is NOT the end of a word, set isWord to false.
         this.isWord = false;
-        // Create the next ones under this node, and have 255 different options for each character
-        this.next = new Node[255];
+        // Create the next ones under this node, and have 255 different options for each character (or 3 for TST)
+        // this.next = new Node[255];
+        this.next = new Node[3];
     }
     // These three functions are pretty straightforward
     public boolean isWord() {
@@ -56,7 +57,6 @@ class Trie {
         // For the last letter in the word, set the isWord boolean to True.
         current.setWord();
     }
-
     public boolean lookup(String s) {
         // Again, start with the root node
         Node current = root;
@@ -75,6 +75,7 @@ class Trie {
         return current.isWord();
     }
 }
+
 
     public class SpellCheck {
         public String[] checkWords(String[] text, String[] dictionary) {
